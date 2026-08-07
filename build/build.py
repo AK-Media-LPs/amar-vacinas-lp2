@@ -22,6 +22,27 @@ TARJA = ('<span style="display:inline-flex;align-items:flex-start;gap:9px;'
          'letter-spacing:0.08em;background:#E5A800;color:#22190A;'
          'border-radius:4px;padding:3px 6px;">CONFIRMAR</span><span>%s</span></span>')
 
+# Correcoes de layout aplicadas sobre o CSS do handoff, mesma logica do
+# COPY_FIXES: o build para se o design mexer no trecho, em vez de perde-las.
+CSS_FIXES = [
+    # 07/08/2026 — hero mobile: a faixa de 450px cortava o topo da cabeca.
+    # A foto e um recorte com a cabeca encostada na borda (y=2 de 1018), entao
+    # qualquer object-position acima de 0% decepa a coroa. Alem do 0%, a faixa
+    # ganha 24px de folga acima e a foto para de ampliar em telas largas.
+    (".amv-hero-img{max-width:none !important;width:100% !important;"
+     "justify-self:stretch !important;margin:18px -22px 0 !important;"
+     "height:450px !important;overflow:hidden !important;}",
+     ".amv-hero-img{max-width:none !important;width:100% !important;"
+     "justify-self:stretch !important;margin:18px -22px 0 !important;"
+     "height:474px !important;padding-top:24px !important;"
+     "overflow:hidden !important;}"),
+    (".amv-hero-img img{width:100% !important;height:450px !important;"
+     "object-fit:cover !important;object-position:50% 6% !important;}",
+     ".amv-hero-img img{width:100% !important;max-width:460px !important;"
+     "margin:0 auto !important;height:450px !important;"
+     "object-fit:cover !important;object-position:50% 0% !important;}"),
+]
+
 COPY_FIXES = [
     # 07/08/2026 — respostas do cliente para as duas tarjas CONFIRMAR do FAQ
     ("Sim, o atendimento é particular. " + TARJA % (
@@ -175,6 +196,12 @@ for old, new in COPY_FIXES:
         sys.exit("Ajuste de copy nao encontrado no handoff — o design mudou "
                  "esse trecho, revise COPY_FIXES:\n  %s" % old)
     body = body.replace(old, new)
+
+for old, new in CSS_FIXES:
+    if old not in helmet:
+        sys.exit("Correcao de CSS nao encontrada no handoff — o design mudou "
+                 "esse trecho, revise CSS_FIXES:\n  %s" % old)
+    helmet = helmet.replace(old, new)
 
 # ---------------------------------------------------------------- 4. head novo
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
