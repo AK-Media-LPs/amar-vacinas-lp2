@@ -18,7 +18,8 @@ assets/img/*.webp          imagens servidas na página
 assets/img/*.png|jpg       originais (fonte; não referenciados pela página)
 assets/fonts/*.woff2       Bricolage Grotesque + Plus Jakarta Sans (self-hosted)
 favicon.ico · favicon.svg · site.webmanifest · robots.txt · vercel.json
-docs/HANDOFF.md            briefing de design original
+docs/HANDOFF.md            briefing do handoff original (07/08/2026)
+docs/HANDOFF-2026-08-19.md briefing do handoff que trouxe carrossel e unidades
 ```
 
 ## Regerar a partir de um handoff novo
@@ -57,7 +58,9 @@ Projeto Vercel próprio (separado da LP1, para medir as duas em paralelo).
 - Corpo de texto base 18px, botões ≥60px, contraste WCAG AA.
 - Mascote discreto (canto do hero e trilha da Solução), sem elementos infantis.
 - Copy adulta: nenhuma menção a criança, brinquedoteca, abelhinha ou caderneta.
-- 10 dobras (a LP1 tem 9): entram Destaques e o bloco de **atendimento domiciliar**.
+- 12 dobras: além de Destaques e do bloco de **atendimento domiciliar**, entram
+  **Conheça o nosso espaço** (carrossel com 10 fotos da clínica) e **Unidades**
+  (Matriz e Filial).
 
 ## Compliance aplicado (do briefing)
 
@@ -65,9 +68,13 @@ Projeto Vercel próprio (separado da LP1, para medir as duas em paralelo).
 - Sem pergunta em segunda pessoa sobre status de saúde (política de saúde da Meta).
 - "Atendimento particular" visível em várias dobras; nenhuma menção negativa à
   rede pública.
-- Responsável técnica identificada: Enf. Antonia de Maria — **sem referência a
-  COREN**, por decisão do cliente (difere da LP1).
-- Endereço: Praça Santo Antônio, 1020 · Centro · Parnaíba (PI).
+- Responsável técnica identificada: **Enf.ª Dra. Antônia de Maria — registro
+  ativo no COREN, disponível para consulta na clínica** (sem o número). A versão
+  anterior desta LP omitia o COREN; o handoff de 19/08/2026 reintroduziu a
+  menção, alinhando com a LP1.
+- Duas unidades, ambas no Centro de Parnaíba (PI): **Matriz** na Praça Santo
+  Antônio, 1020 (primeiro andar da Clínica de Otorrino Gilson Castro) e
+  **Filial** na Rua Ademar Neves, 1580 (Sala B, Clínica Pipa Pediatria).
 
 ## Decisões tomadas na implementação
 
@@ -84,6 +91,9 @@ definidas pelo cliente em 07/08/2026 e aplicadas via `COPY_FIXES`:
 
 - [ ] **Depoimentos** — os 3 da dobra Prova social são fictícios plausíveis,
       herdados do protótipo. Substituir por reais.
+- [ ] **Fotos do carrossel** — parte das fotos da clínica mostra brinquedos e
+      mobiliário infantil (a clínica é a mesma da LP1). Verificar se convém
+      trocar por enquadramentos neutros nesta LP de adultos.
 - [ ] **Foto da dobra Autoridade** — hoje reusa o retrato da Antonia; o ideal é
       uma foto real da equipe.
 - [ ] **Domínio** — ao apontar o domínio final, preencher `og:image` com URL
@@ -97,5 +107,11 @@ desempacota tudo em HTML estático: mesmo resultado visual (validado pixel a pix
 contra o protótipo), sem JS de framework, com imagens em WebP e fontes
 self-hosted.
 
-As animações (reveals no scroll, trilha da Solução, parallax) foram portadas para
-JS vanilla no fim do `index.html` e respeitam `prefers-reduced-motion`.
+As animações (reveals no scroll, trilha da Solução, parallax) e as setas do
+carrossel foram portadas para JS vanilla no fim do `index.html` e respeitam
+`prefers-reduced-motion`. O arraste com snap do carrossel é CSS puro
+(`scroll-snap-type`), sem JS.
+
+Os estados de hover e foco do protótipo vivem em atributos (`style-hover`,
+`style-focus`) que só o runtime do design lê. O build os converte em regras CSS
+reais — com `!important`, já que o estado normal mora no atributo `style`.

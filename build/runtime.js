@@ -178,6 +178,24 @@
     }
   }
 
+  /* ------------------------------------- carrossel "Conheça o nosso espaço" */
+  /* Arraste e snap sao do CSS (.amv-car); aqui ficam so as setas: um passo =
+     largura de uma foto + o gap de 18px do grid. */
+  (function () {
+    var car = R.car;
+    if (!car) return;
+    document.querySelectorAll('[data-car]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var first = car.firstElementChild;
+        var step = first ? first.getBoundingClientRect().width + 18 : car.clientWidth;
+        car.scrollBy({
+          left: (btn.getAttribute('data-car') === 'prev' ? -1 : 1) * step,
+          behavior: motionOff ? 'auto' : 'smooth'
+        });
+      });
+    });
+  })();
+
   /* -------------------------------------------------------------------- init */
   setupReveals();
   setupSteps();

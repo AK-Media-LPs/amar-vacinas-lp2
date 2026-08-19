@@ -79,6 +79,17 @@ IMG_NAMES = {
     "0befea5b60233dfaa99725befdfbd491": "antonia-sentada.png",
     "196b0c7c3cf1cad102e4255e5a46889d": "foto-antonia.jpg",
     "bcc64e89d338c71ad38b8690566f69e9": "antonia-frasco.png",
+    # 19/08/2026 — fotos da dobra "Conheça o nosso espaço" (carrossel)
+    "1a4a7d169674e220162178d1a0b251e7": "clinica-recepcao-ampla.jpg",
+    "840a2c0c428f88425cbbb9d64220dc88": "clinica-cadeia-frio.jpg",
+    "7ee406b3dcb72fb579fd4f0eaf67c02e": "clinica-consultorio.jpg",
+    "4bb2c212c8b722ff7a159ae5f1af5183": "clinica-recepcao.jpg",
+    "d0c7579d45d5bd9cae187b36cd1226db": "clinica-logo-parede.jpg",
+    "ba8ec90a3b96013415b73f061bf6e8a5": "clinica-sala-vacinacao.jpg",
+    "ee09ba0f63800f460219c6b95b0c70e9": "clinica-mesinha-desenho.jpg",
+    "11ffb1414a8c2b263679bbbfdc97651e": "clinica-espaco-ludico.jpg",
+    "8fc99f574aa07ff925944aff43640d6d": "clinica-recepcao-urso.jpg",
+    "b1efa7940dc40d70195856a19f1780f2": "clinica-urso-entrada.jpg",
 }
 
 # nomes das fontes: derivados do comentario /* subset */ que precede cada @font-face
@@ -149,6 +160,9 @@ def clean(s):
     s = s.replace('ref="{{ rMas }}"', "data-mas")
     s = re.sub(r'ref="\{\{ r(\w+) \}\}"',
                lambda m: 'data-ref="%s%s"' % (m.group(1)[0].lower(), m.group(1)[1:]), s)
+    # setas do carrossel: o handler do prototipo vira um data-attr do runtime
+    s = re.sub(r'sc-camel-on-click="\{\{ car(Prev|Next) \}\}"',
+               lambda m: 'data-car="%s"' % m.group(1).lower(), s)
     s = s.replace("{{ ctaLink }}", CTA)
     for uuid, rel in url_of.items():
         s = s.replace(uuid, rel)
@@ -190,6 +204,36 @@ def fiximg(m):
 
 
 body = re.sub(r"<img\b[^>]*>", fiximg, body)
+
+# --------------------------------------- 3b. style-hover/style-focus -> CSS
+# O prototipo declara hover e focus em atributos que so o runtime do design le;
+# em producao eles sumiam e os CTAs ficavam sem retorno visual. Viram regras
+# reais, com !important porque o estado normal mora no atributo style.
+hover_rules = []
+
+
+def hoverize(m):
+    tag = m.group(0)
+    pseudos = []
+    for attr, pseudo in (("style-hover", "hover"), ("style-focus", "focus-visible")):
+        mm = re.search(r'\s%s="([^"]*)"' % attr, tag)
+        if not mm:
+            continue
+        decls = [d.strip() for d in mm.group(1).split(";") if d.strip()]
+        pseudos.append((pseudo, ";".join(d + " !important" for d in decls)))
+        tag = tag.replace(mm.group(0), "")
+    if not pseudos:
+        return tag
+    cls = "amv-i%d" % (len(hover_rules) + 1)
+    hover_rules.append("".join(".%s:%s{%s}" % (cls, ps, d) for ps, d in pseudos))
+    if 'class="' in tag:
+        return tag.replace('class="', 'class="%s ' % cls, 1)
+    return re.sub(r"^<(\w+)", r"<\1 " + 'class="%s"' % cls, tag)
+
+
+body = re.sub(r"<(?:a|button)\b[^>]*style-(?:hover|focus)=[^>]*>", hoverize, body)
+assert "style-hover" not in body and "style-focus" not in body
+assert "sc-camel-on-click" not in body
 
 for old, new in COPY_FIXES:
     if old not in body:
@@ -244,6 +288,9 @@ else:  # sem dominio definido ainda: og:image relativa (a maioria dos scrapers r
 
 # preconnects para o Google Fonts nao servem mais (fontes sao locais)
 helmet = re.sub(r'<link rel="preconnect"[^>]*>\s*', "", helmet)
+
+# hover/focus recuperados dos atributos do prototipo (secao 3b)
+helmet += "\n<style>%s</style>" % "".join(hover_rules)
 
 # ---------------------------------------------------------------- 5. runtime
 runtime = open(os.path.join(HERE, "runtime.js"), encoding="utf-8").read()

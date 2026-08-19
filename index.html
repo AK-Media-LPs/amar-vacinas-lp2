@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amar Vacinas · Vacinação particular para adultos e idosos</title>
-<meta name="description" content="Clínica particular de vacinação para todas as idades. Atendimento com hora marcada, sem fila, orientação individual e cadeia de frio controlada, sob responsabilidade técnica da Enf. Antonia de Maria. Fale no WhatsApp.">
+<meta name="description" content="Clínica particular de vacinação para todas as idades. Atendimento com hora marcada, sem fila, orientação individual e cadeia de frio controlada, sob responsabilidade técnica da Enf.ª Dra. Antônia de Maria. Fale no WhatsApp.">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -134,6 +134,12 @@ a:hover{color:#22317E;}
 .amv-split{display:grid;gap:44px;align-items:center;}
 .amv-exp{display:grid;gap:20px;}
 .amv-stats{display:grid;gap:30px;}
+.amv-units{display:grid;gap:24px;}
+.amv-car{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px;}
+.amv-car::-webkit-scrollbar{display:none;}
+.amv-car>figure{flex:0 0 86%;scroll-snap-align:center;}
+.amv-car-nav{display:flex;gap:12px;}
+@media (min-width:901px){.amv-car>figure{flex:0 0 calc(33.333% - 12px);}}
 .amv-quotes{display:grid;gap:20px;}
 .amv-d{display:none;}
 .amv-cta-m{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#FFFFFF;border-top:1px solid #E4E9FF;padding:12px 16px calc(12px + env(safe-area-inset-bottom));}
@@ -146,6 +152,7 @@ a:hover{color:#22317E;}
 .amv-split{grid-template-columns:0.95fr 1.05fr;gap:72px;}
 .amv-exp{grid-template-columns:repeat(2,1fr);gap:24px;}
 .amv-stats{grid-template-columns:1.25fr 1fr 1fr;align-items:end;gap:44px;}
+.amv-units{grid-template-columns:repeat(2,1fr);gap:32px;}
 .amv-quotes{grid-template-columns:repeat(3,1fr);gap:24px;}
 .amv-d{display:block;}
 .amv-m{display:none;}
@@ -178,6 +185,8 @@ a:hover{color:#22317E;}
 .amv-faq details[open] .amv-x{transform:rotate(45deg);}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
 </style>
+
+<style>.amv-i1:hover{transform:translateY(-2px) !important;box-shadow:0 20px 38px -14px rgba(0,0,0,0.6) !important;color:#FFFFFF !important}.amv-i1:focus-visible{outline:3px solid #E4E9FF !important;outline-offset:3px !important}.amv-i2:hover{transform:translateY(-2px) !important;box-shadow:0 20px 38px -14px rgba(60,93,250,0.65) !important;color:#FFFFFF !important}.amv-i2:focus-visible{outline:3px solid #22317E !important;outline-offset:3px !important}.amv-i3:hover{background:#E4E9FF !important;transform:translateY(-2px) !important}.amv-i3:focus-visible{outline:3px solid #E4E9FF !important;outline-offset:2px !important}.amv-i4:hover{background:#E4E9FF !important;transform:translateY(-2px) !important}.amv-i4:focus-visible{outline:3px solid #E4E9FF !important;outline-offset:2px !important}.amv-i5:hover{transform:translateY(-2px) !important;box-shadow:0 22px 42px -14px rgba(0,0,0,0.65) !important;color:#FFFFFF !important}.amv-i5:focus-visible{outline:3px solid #E4E9FF !important;outline-offset:3px !important}.amv-i6:focus-visible{outline:3px solid #E4E9FF !important;outline-offset:2px !important}</style>
 <meta name="theme-color" content="#3C5DFA">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -187,7 +196,7 @@ a:hover{color:#22317E;}
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Amar Vacinas">
 <meta property="og:title" content="Amar Vacinas · Vacinação particular para adultos e idosos">
-<meta property="og:description" content="Clínica particular de vacinação para todas as idades. Atendimento com hora marcada, sem fila, orientação individual e cadeia de frio controlada, sob responsabilidade técnica da Enf. Antonia de Maria. Fale no WhatsApp.">
+<meta property="og:description" content="Clínica particular de vacinação para todas as idades. Atendimento com hora marcada, sem fila, orientação individual e cadeia de frio controlada, sob responsabilidade técnica da Enf.ª Dra. Antônia de Maria. Fale no WhatsApp.">
 <meta property="og:image" content="assets/img/og-amar-vacinas.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -210,7 +219,7 @@ a:hover{color:#22317E;}
   </svg>
   <div class="amvw" style="position:relative;">
     <div class="amv-lockup" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:22px;">
-      <img src="assets/img/logo-amar-branca.webp" alt="Amar Vacinas · Antonia de Maria" style="display:block;height:64px;width:auto;" width="1005" height="382" fetchpriority="high" decoding="async">
+      <img src="assets/img/logo-amar-branca.webp" alt="Amar Vacinas · Antônia de Maria" style="display:block;height:64px;width:auto;" width="1005" height="382" fetchpriority="high" decoding="async">
       <span style="display:flex;align-items:center;gap:20px;">
         <span aria-hidden="true" style="width:1px;height:44px;background:rgba(228,233,255,0.35);"></span>
         <span class="amv-lk-tx" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-style:italic;font-size:1rem;line-height:1.4;color:#E4E9FF;text-align:right;">Vacinar é proteger<br>e proteger é amar</span>
@@ -230,7 +239,7 @@ a:hover{color:#22317E;}
         <p  data-rv="up" data-rd="260" class="amv-sub-d" style="margin:20px 0 0;font-size:1.1875rem;line-height:1.7;max-width:36rem;color:#FFFFFF;opacity:0.93;">Atendimento com hora marcada, sem fila e no seu tempo, com uma equipe que explica cada etapa com calma. Na Amar Vacinas, manter sua vacinação em dia é simples — e você é atendido com a atenção que merece.</p>
         <p  data-rv="up" data-rd="260" class="amv-sub-m" style="display:none;margin:20px 0 0;font-size:1.125rem;line-height:1.6;color:#FFFFFF;opacity:0.93;">Hora marcada, sem fila e uma equipe que explica cada etapa com calma.</p>
         <div  data-rv="up" data-rd="380" class="amv-cta-wrap" style="margin-top:30px;">
-          <a href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="hero" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:18px 36px;min-height:60px;border-radius:999px;text-decoration:none;box-shadow:0 14px 30px -14px rgba(0,0,0,0.55);transition:transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(0,0,0,0.6);color:#FFFFFF;" style-focus="outline:3px solid #E4E9FF;outline-offset:3px;">
+          <a class="amv-i1" href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="hero" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:18px 36px;min-height:60px;border-radius:999px;text-decoration:none;box-shadow:0 14px 30px -14px rgba(0,0,0,0.55);transition:transform 0.25s ease, box-shadow 0.25s ease;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.15A8.8 8.8 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><path d="M9 8.6c-.3 0-.7.1-.9.5-.3.4-.7 1.1-.5 2 .2 1 1 2.3 2.2 3.4 1.4 1.3 2.9 1.9 3.9 1.9.5 0 1.3-.3 1.6-.8.2-.4.3-.8.2-1l-1.7-.8c-.2-.1-.5 0-.7.2l-.5.6c-.6-.2-1.9-1.2-2.4-2.2l.5-.6c.2-.2.2-.5.1-.7L10 8.9c-.1-.2-.3-.3-.5-.3H9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
             <span>Quero cuidar da minha vacinação</span>
           </a>
@@ -239,7 +248,7 @@ a:hover{color:#22317E;}
       </div>
       <div  data-rv="up" data-rd="200" class="amv-hero-img" style="position:relative;max-width:520px;width:104%;justify-self:end;align-self:end;margin-bottom:-2px;">
         <span class="amv-hero-glow" aria-hidden="true" style="display:none;position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:118%;aspect-ratio:1 / 1;border-radius:50%;background:radial-gradient(closest-side, rgba(60,93,250,0.55), rgba(34,49,126,0) 72%);"></span>
-        <img src="assets/img/antonia-frasco.webp" alt="Enf. Antonia de Maria segurando um frasco de vacina" style="display:block;position:relative;width:100%;height:auto;" width="619" height="1018" fetchpriority="high" decoding="async">
+        <img src="assets/img/antonia-frasco.webp" alt="Enf.ª Dra. Antônia de Maria segurando um frasco de vacina" style="display:block;position:relative;width:100%;height:auto;" width="619" height="1018" fetchpriority="high" decoding="async">
         <div data-mas class="amv-d" style="position:absolute;left:-6px;bottom:14%;width:72px;animation:amv-float 5.2s ease-in-out infinite;">
           <img src="assets/img/mascote-pulando.webp" alt="" style="display:block;width:100%;height:auto;filter:drop-shadow(0 12px 16px rgba(0,0,0,0.4));" width="340" height="288" loading="lazy" decoding="async">
         </div>
@@ -257,7 +266,7 @@ a:hover{color:#22317E;}
     </span>
     <span style="display:inline-flex;align-items:center;gap:12px;font-size:1.25rem;font-weight:700;color:#22317E;white-space:nowrap;">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9.5" r="4.4" stroke="#3C5DFA" stroke-width="1.7"></circle><path d="M9.6 13.2 7.8 20l4.2-2.2L16.2 20l-1.8-6.8" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      <span>Responsável técnica: Enf. Antonia de Maria</span>
+      <span>Responsável técnica: Enf.ª Dra. Antônia de Maria</span>
     </span>
     <span style="display:inline-flex;align-items:center;gap:12px;font-size:1.25rem;font-weight:700;color:#22317E;white-space:nowrap;">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5.2 6.9l13.6 10.2M18.8 6.9 5.2 17.1" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round"></path></svg>
@@ -272,7 +281,7 @@ a:hover{color:#22317E;}
     </span>
     <span aria-hidden="true" style="display:inline-flex;align-items:center;gap:12px;font-size:1.25rem;font-weight:700;color:#22317E;white-space:nowrap;">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9.5" r="4.4" stroke="#3C5DFA" stroke-width="1.7"></circle><path d="M9.6 13.2 7.8 20l4.2-2.2L16.2 20l-1.8-6.8" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      <span>Responsável técnica: Enf. Antonia de Maria</span>
+      <span>Responsável técnica: Enf.ª Dra. Antônia de Maria</span>
     </span>
     <span aria-hidden="true" style="display:inline-flex;align-items:center;gap:12px;font-size:1.25rem;font-weight:700;color:#22317E;white-space:nowrap;">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5.2 6.9l13.6 10.2M18.8 6.9 5.2 17.1" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round"></path></svg>
@@ -293,7 +302,7 @@ a:hover{color:#22317E;}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 6v6l4 2" stroke="#3C5DFA" stroke-width="1.9" stroke-linecap="round"></path><circle cx="12" cy="12" r="9" stroke="#3C5DFA" stroke-width="1.7"></circle></svg>
         </span>
         <h3 style="margin:18px 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.375rem;color:#22317E;">Hora marcada, sem fila</h3>
-        <p style="margin:0;font-size:1.0625rem;line-height:1.65;">Você chega e é atendido no horário.</p>
+        <p style="margin:0;font-size:1.0625rem;line-height:1.65;">Você chega e é atendido no horário — e quem vem sem agendar também é recebido pela equipe.</p>
       </div>
       <div  data-rv="up" data-rd="130" style="background:#FFFFFF;border:1px solid #E4E9FF;border-radius:20px;padding:30px 32px;box-shadow:12px 18px 40px -26px rgba(34,49,126,0.25);">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#E4E9FF;">
@@ -318,7 +327,7 @@ a:hover{color:#22317E;}
   <div class="amvw">
     <div style="max-width:760px;">
       <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3C5DFA;">O cuidado que a gente adia</p>
-      <h2  data-rv="clip" style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">Na infância alguém acompanhava seu calendário. Depois, ficou por sua conta.</h2>
+      <h2  data-rv="clip" style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">Na infância alguém acompanhava seu calendário. Agora, fica por sua conta.</h2>
     </div>
     <div data-ref="painWrap" style="margin-top:52px;will-change:transform;">
       <div class="amv-cards3">
@@ -327,11 +336,11 @@ a:hover{color:#22317E;}
           <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Criança tem caderneta, pediatra e quem lembre. Adulto não tem ninguém — e as doses vão ficando para depois, sem que ninguém avise.</p>
         </div>
         <div  data-rv="up" data-rd="130" style="background:#E4E9FF;border-left:3px solid #3C5DFA;border-radius:20px;padding:34px 36px;">
-          <h3 style="margin:0 0 12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#22317E;">Fila e espera cobram caro</h3>
+          <h3 style="margin:0 0 12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#22317E;">Fila e espera não combinam com você</h3>
           <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Ficar de pé aguardando, voltar outro dia porque a dose não chegou, encarar a correria de uma unidade cheia. Para quem tem rotina apertada — ou para quem já não tem a mesma disposição — isso pesa de verdade.</p>
         </div>
         <div  data-rv="up" data-rd="260" style="background:#E4E9FF;border-left:3px solid #3C5DFA;border-radius:20px;padding:34px 36px;">
-          <h3 style="margin:0 0 12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#22317E;">Ninguém explica com calma</h3>
+          <h3 style="margin:0 0 12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.375rem;line-height:1.25;color:#22317E;">Ninguém te explica com calma</h3>
           <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Você sai com a vacina aplicada e a dúvida intacta: era essa mesmo? Quando é a próxima? Precisa de reforço? Falta alguém com tempo para explicar.</p>
         </div>
       </div>
@@ -344,7 +353,7 @@ a:hover{color:#22317E;}
   <div class="amvw" style="position:relative;">
     <div style="text-align:center;">
       <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#22317E;">Simples, do começo ao fim</p>
-      <h2  data-rv="clip" style="margin:18px auto 0;max-width:24ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">Sua vacinação organizada por quem tem tempo de cuidar</h2>
+      <h2  data-rv="clip" style="margin:18px auto 0;max-width:24ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">Sua vacinação organizada por quem tem tempo de cuidar de você</h2>
     </div>
     <div style="position:relative;margin-top:92px;">
       <svg data-ref="stepSvg" class="amv-d" style="position:absolute;left:0;top:-60px;width:100%;height:66px;pointer-events:none;" fill="none" aria-hidden="true">
@@ -370,8 +379,8 @@ a:hover{color:#22317E;}
         </div>
         <div  data-rv="up" data-rd="150" style="background:#FFFFFF;border-radius:22px;padding:36px 34px;box-shadow:14px 20px 44px -26px rgba(34,49,126,0.28);">
           <span  data-rv="mark" data-rd="150" style="display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#FFFFFF;border:2px solid #E4E9FF;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.35rem;color:#22317E;">2</span>
-          <h3 style="margin:22px 0 10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.4375rem;color:#22317E;">Venha no horário que combinamos</h3>
-          <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Sem fila e sem espera. Você é recebido na hora marcada, em um ambiente tranquilo, por uma equipe que explica cada etapa no seu tempo.</p>
+          <h3 style="margin:22px 0 10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.4375rem;color:#22317E;">Estamos aqui à sua disposição</h3>
+          <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Agende seu horário pelo WhatsApp — ou venha quando puder, a equipe está pronta pra te receber. Sem fila e sem espera: você é atendido em um ambiente tranquilo, por uma equipe que explica cada etapa no seu tempo.</p>
         </div>
         <div  data-rv="up" data-rd="300" style="background:#FFFFFF;border-radius:22px;padding:36px 34px;box-shadow:14px 20px 44px -26px rgba(34,49,126,0.28);">
           <span  data-rv="mark" data-rd="300" style="display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#FFFFFF;border:2px solid #E4E9FF;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.35rem;color:#22317E;">3</span>
@@ -381,7 +390,7 @@ a:hover{color:#22317E;}
       </div>
     </div>
     <div  data-rv="up" style="display:flex;justify-content:center;margin-top:52px;">
-      <a href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="meio" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:18px 36px;min-height:60px;border-radius:999px;text-decoration:none;box-shadow:0 14px 30px -14px rgba(60,93,250,0.6);transition:transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(60,93,250,0.65);color:#FFFFFF;" style-focus="outline:3px solid #22317E;outline-offset:3px;">Quero falar com a Amar Vacinas</a>
+      <a class="amv-i2" href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="meio" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:18px 36px;min-height:60px;border-radius:999px;text-decoration:none;box-shadow:0 14px 30px -14px rgba(60,93,250,0.6);transition:transform 0.25s ease, box-shadow 0.25s ease;">Quero falar com a Amar Vacinas</a>
     </div>
   </div>
 </section>
@@ -401,12 +410,13 @@ a:hover{color:#22317E;}
       </div>
       <div>
         <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3C5DFA;">Quem cuida de você aqui</p>
-        <h2  data-rv="clip" style="margin:18px 0 0;max-width:22ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:clamp(1.9rem, 3.5vw, 2.75rem);line-height:1.12;letter-spacing:-0.015em;color:#22317E;">Uma equipe de enfermagem sob responsabilidade técnica da Enf. Antonia de Maria</h2>
-        <p  data-rv="up" data-rd="180" style="margin:26px 0 0;max-width:34rem;font-size:1.125rem;line-height:1.75;">Na Amar Vacinas, cada aplicação é feita por profissionais de enfermagem qualificados, com cadeia de frio controlada e registro do que foi aplicado. Responsabilidade técnica da Enf. Antonia de Maria.</p>
+        <h2  data-rv="clip" style="margin:18px 0 0;max-width:22ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:clamp(1.9rem, 3.5vw, 2.75rem);line-height:1.12;letter-spacing:-0.015em;color:#22317E;">Uma equipe de enfermagem sob responsabilidade técnica da Enf.ª Dra. Antônia de Maria</h2>
+        <p  data-rv="up" data-rd="180" style="margin:26px 0 0;max-width:34rem;font-size:1.125rem;line-height:1.75;">Na Amar Vacinas, cada aplicação é realizada por profissionais de enfermagem qualificados, com cadeia de frio controlada e registro do que foi aplicado. Responsabilidade técnica da Enf.ª Dra. Antônia de Maria — registro ativo no COREN, disponível para consulta na clínica.</p>
         <div  data-rv="up" data-rd="280" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;">
           <span style="display:inline-flex;align-items:center;gap:9px;background:#E4E9FF;color:#22317E;font-size:0.9375rem;font-weight:600;border-radius:999px;padding:12px 20px;">Responsabilidade técnica identificada</span>
           <span style="display:inline-flex;align-items:center;gap:9px;background:#E4E9FF;color:#22317E;font-size:0.9375rem;font-weight:600;border-radius:999px;padding:12px 20px;">Equipe de enfermagem qualificada</span>
           <span style="display:inline-flex;align-items:center;gap:9px;background:#E4E9FF;color:#22317E;font-size:0.9375rem;font-weight:600;border-radius:999px;padding:12px 20px;">Registro do que foi aplicado</span>
+          <span style="display:inline-flex;align-items:center;gap:9px;background:#E4E9FF;color:#22317E;font-size:0.9375rem;font-weight:600;border-radius:999px;padding:12px 20px;">Registro ativo no COREN, disponível na clínica</span>
         </div>
       </div>
     </div>
@@ -417,13 +427,13 @@ a:hover{color:#22317E;}
 <section style="background:#E4E9FF;padding:clamp(72px, 9vw, 120px) 0;">
   <div class="amvw">
     <div style="max-width:700px;">
-      <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#22317E;">Atendimento particular, do jeito que deveria ser</p>
-      <h2  data-rv="clip" style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">O que muda quando existe tempo para cuidar</h2>
+      <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#22317E;">Atendimento particular, do jeito que você merece</p>
+      <h2  data-rv="clip" style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">O que muda quando existe tempo para cuidar de você</h2>
     </div>
     <div class="amv-exp" style="margin-top:48px;">
       <div  data-rv="up" style="background:#FFFFFF;border-radius:20px;padding:30px 32px;">
-        <h3 style="margin:0 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.3125rem;color:#22317E;">Hora marcada de verdade</h3>
-        <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Você não organiza o dia em torno de uma fila.</p>
+        <h3 style="margin:0 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.3125rem;color:#22317E;">Equipe pronta e aguardando você</h3>
+        <p style="margin:0;font-size:1.0625rem;line-height:1.7;">Com hora marcada ou sem agendar: você não organiza o dia em torno de uma fila.</p>
       </div>
       <div  data-rv="up" data-rd="120" style="background:#FFFFFF;border-radius:20px;padding:30px 32px;">
         <h3 style="margin:0 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.3125rem;color:#22317E;">Orientação individual</h3>
@@ -493,7 +503,7 @@ a:hover{color:#22317E;}
     <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:56px;">
       <span style="display:inline-flex;align-items:center;gap:10px;background:#E4E9FF;color:#22317E;border-radius:999px;padding:14px 22px;font-size:0.9375rem;font-weight:600;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="9.5" r="4.4" stroke="#3C5DFA" stroke-width="1.7"></circle><path d="M9.6 13.2 7.8 20l4.2-2.2L16.2 20l-1.8-6.8" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        <span>Responsável técnica: Enf. Antonia de Maria</span>
+        <span>Responsável técnica: Enf.ª Dra. Antônia de Maria</span>
       </span>
       <span style="display:inline-flex;align-items:center;gap:10px;background:#E4E9FF;color:#22317E;border-radius:999px;padding:14px 22px;font-size:0.9375rem;font-weight:600;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5.2 6.9l13.6 10.2M18.8 6.9 5.2 17.1" stroke="#3C5DFA" stroke-width="1.7" stroke-linecap="round"></path></svg>
@@ -565,7 +575,115 @@ a:hover{color:#22317E;}
   </div>
 </section>
 
-<!-- ============ 10. CTA FINAL ============ -->
+<!-- ============ 9b. CONHEÇA O ESPAÇO ============ -->
+<section data-ref="carSec" style="background:#FFFFFF;padding:clamp(72px, 9vw, 120px) 0;overflow:hidden;">
+  <div class="amvw">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;">
+      <div style="max-width:620px;">
+        <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3C5DFA;">Por dentro da Amar</p>
+        <h2  data-rv="clip" style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.14;letter-spacing:-0.015em;color:#22317E;">Conheça o nosso espaço</h2>
+      </div>
+      <div class="amv-car-nav">
+        <button class="amv-i3" type="button" data-car="prev" aria-label="Foto anterior" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid #C9D3FA;background:#FFFFFF;border-radius:50%;cursor:pointer;color:#3C5DFA;transition:background 0.25s ease, transform 0.25s ease;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <button class="amv-i4" type="button" data-car="next" aria-label="Próxima foto" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid #C9D3FA;background:#FFFFFF;border-radius:50%;cursor:pointer;color:#3C5DFA;transition:background 0.25s ease, transform 0.25s ease;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div data-ref="car" class="amv-car" style="margin-top:44px;">
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-recepcao-ampla.webp" alt="Recepção da Amar Vacinas com a marca na parede" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="481" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Recepção, com espera tranquila</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-cadeia-frio.webp" alt="Sala de vacinação com refrigerador científico monitorado" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Sala de vacinação com cadeia de frio controlada</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-consultorio.webp" alt="Sala de orientação com poltronas e mesa de atendimento" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Sala de orientação, para conversar com calma</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-recepcao.webp" alt="Área de espera com balcão de atendimento e televisão" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Balcão de atendimento e área de espera</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-logo-parede.webp" alt="Marca Amar Vacinas · Antônia de Maria na parede da clínica" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Amar Vacinas · Antônia de Maria</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-sala-vacinacao.webp" alt="Sala de vacinação com poltrona de atendimento e bancada" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Poltrona de atendimento na sala de vacinação</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-recepcao-urso.webp" alt="Corredor da clínica com a marca na parede e a porta da sala de vacinas" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Caminho até a sala de vacinas</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-espaco-ludico.webp" alt="Sala de espera com sofás e área de convivência" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Sala de espera para toda a família</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-mesinha-desenho.webp" alt="Área de convivência com máquina de pipoca e mesa de atividades" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Área de convivência</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <div style="aspect-ratio:16 / 10;border-radius:24px;overflow:hidden;background:#E4E9FF;">
+          <img src="assets/img/clinica-urso-entrada.webp" alt="Entrada da sala de vacinas com a marca na parede" style="display:block;width:100%;height:100%;object-fit:cover;" width="1200" height="676" loading="lazy" decoding="async">
+        </div>
+        <figcaption style="margin-top:16px;font-size:1.0625rem;font-weight:600;color:#22317E;">Entrada da sala de vacinas</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. UNIDADES ============ -->
+<section style="background:#FFFFFF;padding:clamp(72px, 9vw, 120px) 0;">
+  <div class="amvw">
+    <div style="text-align:center;">
+      <p style="margin:0;font-size:0.9375rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3C5DFA;">Onde estamos</p>
+      <h2  data-rv="clip" style="margin:18px auto 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:clamp(1.9rem, 3.5vw, 2.85rem);line-height:1.12;letter-spacing:-0.015em;color:#22317E;">Duas unidades em Parnaíba</h2>
+    </div>
+    <div class="amv-units" style="margin-top:52px;">
+      <div  data-rv="up" style="background:#22317E;border-radius:24px;overflow:hidden;box-shadow:18px 26px 60px -32px rgba(34,49,126,0.4);">
+        <div style="padding:30px 32px 34px;">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(228,233,255,0.18);color:#E4E9FF;font-size:0.8125rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:8px 14px;">Matriz</span>
+          <h3 style="margin:18px 0 10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.375rem;line-height:1.25;color:#FFFFFF;">Praça Santo Antônio, 1020</h3>
+          <p style="margin:0;font-size:1.0625rem;line-height:1.7;color:#FFFFFF;opacity:0.93;">Centro, Parnaíba/PI<br>Primeiro andar da Clínica de Otorrino Gilson Castro</p>
+        </div>
+      </div>
+      <div  data-rv="up" data-rd="140" style="background:#22317E;border-radius:24px;overflow:hidden;box-shadow:18px 26px 60px -32px rgba(34,49,126,0.4);">
+        <div style="padding:30px 32px 34px;">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(228,233,255,0.18);color:#E4E9FF;font-size:0.8125rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:8px 14px;">Filial</span>
+          <h3 style="margin:18px 0 10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:1.375rem;line-height:1.25;color:#FFFFFF;">Rua Ademar Neves, 1580</h3>
+          <p style="margin:0;font-size:1.0625rem;line-height:1.7;color:#FFFFFF;opacity:0.93;">Centro, Parnaíba/PI<br>Sala B, Clínica Pipa Pediatria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. CTA FINAL ============ -->
 <section class="amv-safe" style="position:relative;background:#22317E;overflow:hidden;padding:clamp(84px, 11vw, 150px) 0 0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
     <path d="M-30 140 C 90 90,190 84,310 108 C 430 132,510 140,630 126 C 750 112,850 100,970 116 C 1090 132,1200 138,1330 122 C 1390 115,1430 114,1470 118" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2.5" stroke-dasharray="0.5 11" stroke-linecap="round"></path>
@@ -580,7 +698,7 @@ a:hover{color:#22317E;}
     <h2  data-rv="clip" style="margin:0 auto;max-width:22ch;font-family:'Bricolage Grotesque',sans-serif;font-weight:650;font-size:clamp(2rem, 4.2vw, 3.4rem);line-height:1.1;letter-spacing:-0.015em;color:#FFFFFF;">Cuidar da sua saúde não precisa esperar sobrar tempo.</h2>
     <p  data-rv="up" data-rd="140" style="margin:28px auto 0;max-width:44rem;font-size:1.1875rem;line-height:1.75;color:#FFFFFF;opacity:0.93;">Fale com a Amar Vacinas pelo WhatsApp, sem compromisso. A equipe avalia o que está em dia, orienta sobre as próximas doses e agenda um horário que caiba na sua rotina. Atendimento particular, para todas as idades, com o tempo e a calma que você merece.</p>
     <div  data-rv="up" data-rd="260" style="margin-top:44px;">
-      <a href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="final" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:19px 38px;min-height:62px;border-radius:999px;text-decoration:none;box-shadow:0 16px 34px -14px rgba(0,0,0,0.6);transition:transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 22px 42px -14px rgba(0,0,0,0.65);color:#FFFFFF;" style-focus="outline:3px solid #E4E9FF;outline-offset:3px;">
+      <a class="amv-i5" href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="final" style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.125rem;line-height:1.3;padding:19px 38px;min-height:62px;border-radius:999px;text-decoration:none;box-shadow:0 16px 34px -14px rgba(0,0,0,0.6);transition:transform 0.25s ease, box-shadow 0.25s ease;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.15A8.8 8.8 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><path d="M9 8.6c-.3 0-.7.1-.9.5-.3.4-.7 1.1-.5 2 .2 1 1 2.3 2.2 3.4 1.4 1.3 2.9 1.9 3.9 1.9.5 0 1.3-.3 1.6-.8.2-.4.3-.8.2-1l-1.7-.8c-.2-.1-.5 0-.7.2l-.5.6c-.6-.2-1.9-1.2-2.4-2.2l.5-.6c.2-.2.2-.5.1-.7L10 8.9c-.1-.2-.3-.3-.5-.3H9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
         <span>Quero começar pelo WhatsApp agora</span>
       </a>
@@ -590,8 +708,8 @@ a:hover{color:#22317E;}
   </div>
   <footer style="position: relative; margin-top: clamp(64px, 8vw, 100px); border-top: 1px solid rgba(228,233,255,0.22)">
     <div class="amvw" style="display:grid;gap:18px;padding-top:32px;padding-bottom:36px;">
-      <img src="assets/img/logo-amar-branca.webp" alt="Amar Vacinas · Antonia de Maria" style="display:block;height:44px;width:auto;" width="1005" height="382" loading="lazy" decoding="async">
-      <p style="margin:0;font-size:0.9375rem;line-height:1.7;color:#E4E9FF;">Amar Vacinas · Clínica particular de vacinação<br>Responsável técnica: Enf. Antonia de Maria<br>Praça Santo Antônio, 1020 · Centro · Parnaíba (PI)</p>
+      <img src="assets/img/logo-amar-branca.webp" alt="Amar Vacinas · Antônia de Maria" style="display:block;height:44px;width:auto;" width="1005" height="382" loading="lazy" decoding="async">
+      <p style="margin:0;font-size:0.9375rem;line-height:1.7;color:#E4E9FF;">Amar Vacinas · Clínica particular de vacinação<br>Responsável técnica: Enf.ª Dra. Antônia de Maria — registro ativo no COREN, disponível para consulta na clínica<br>Matriz: Praça Santo Antônio, 1020 · Centro · Parnaíba (PI) — primeiro andar da Clínica de Otorrino Gilson Castro<br>Filial: Rua Ademar Neves, 1580 · Centro · Parnaíba (PI) — Sala B, Clínica Pipa Pediatria</p>
       <p style="margin:0;font-size:0.875rem;line-height:1.7;color:#E4E9FF;opacity:0.8;max-width:60rem;">Atendimento particular. As informações desta página são de caráter informativo e não substituem a avaliação de um profissional de saúde.</p>
       <p style="margin:0;font-size:0.875rem;color:#E4E9FF;opacity:0.7;">© 2026 Amar Vacinas</p>
     </div>
@@ -601,7 +719,7 @@ a:hover{color:#22317E;}
 
 
 <div class="amv-cta-m">
-  <a href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="sticky" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.0625rem;line-height:1;min-height:56px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -12px rgba(60,93,250,0.55);" style-focus="outline:3px solid #E4E9FF;outline-offset:2px;">
+  <a class="amv-i6" href="https://wa.me/558699334058?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-cta="sticky" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#3C5DFA;color:#FFFFFF;font-weight:700;font-size:1.0625rem;line-height:1;min-height:56px;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -12px rgba(60,93,250,0.55);">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.15A8.8 8.8 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><path d="M9 8.6c-.3 0-.7.1-.9.5-.3.4-.7 1.1-.5 2 .2 1 1 2.3 2.2 3.4 1.4 1.3 2.9 1.9 3.9 1.9.5 0 1.3-.3 1.6-.8.2-.4.3-.8.2-1l-1.7-.8c-.2-.1-.5 0-.7.2l-.5.6c-.6-.2-1.9-1.2-2.4-2.2l.5-.6c.2-.2.2-.5.1-.7L10 8.9c-.1-.2-.3-.3-.5-.3H9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
     <span>Agendar pelo WhatsApp</span>
   </a>
@@ -787,6 +905,24 @@ a:hover{color:#22317E;}
       }
     }
   }
+
+  /* ------------------------------------- carrossel "Conheça o nosso espaço" */
+  /* Arraste e snap sao do CSS (.amv-car); aqui ficam so as setas: um passo =
+     largura de uma foto + o gap de 18px do grid. */
+  (function () {
+    var car = R.car;
+    if (!car) return;
+    document.querySelectorAll('[data-car]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var first = car.firstElementChild;
+        var step = first ? first.getBoundingClientRect().width + 18 : car.clientWidth;
+        car.scrollBy({
+          left: (btn.getAttribute('data-car') === 'prev' ? -1 : 1) * step,
+          behavior: motionOff ? 'auto' : 'smooth'
+        });
+      });
+    });
+  })();
 
   /* -------------------------------------------------------------------- init */
   setupReveals();
